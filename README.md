@@ -22,3 +22,18 @@ python install_openfalcon_agent.py jiangshu-61.155.138.173
 ```
 
 
+# cmd_batch.sh / scp_batch.sh
+多台机器批量执行命令或复制数据
+
+示例:
+> 创建一个包含IP 列表的`ips.txt` 文件
+```
+192.168.1.80
+192.168.1.81
+192.168.1.82
+```
+> 执行命令
+```
+bash cmd_batch.sh date
+bash scp_batch.sh /tmp/test.txt /tmp
+```
