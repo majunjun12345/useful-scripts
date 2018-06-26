@@ -37,3 +37,17 @@ python install_openfalcon_agent.py jiangshu-61.155.138.173
 bash cmd_batch.sh date
 bash scp_batch.sh /tmp/test.txt /tmp
 ```
+
+# install_docker_parall.sh
+多台机器中并行安装docker
+示例:
+> 创建一个包含IP 列表的`ips.txt` 文件
+```
+192.168.1.48
+192.168.1.53
+192.168.1.54
+```
+> 执行命令
+```
+bash install_docker_parall.sh
+```

@@ -10,8 +10,5 @@ echo "Prepare to execute $cmd on $nodes"
 
 for ip in $nodes ; do
     echo $ip ---------------------------
-    ssh -t -o GSSAPIAuthentication=no root@$ip "$cmd"
-    if [ "$?" != "0" ]; then
-        break
-    fi  
+    ssh -o GSSAPIAuthentication=no root@$ip "$cmd" &
 done
