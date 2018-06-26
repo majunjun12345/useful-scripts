@@ -51,3 +51,19 @@ bash scp_batch.sh /tmp/test.txt /tmp
 ```
 bash install_docker_parall.sh
 ```
+> 验证
+```
+bash cmd_batch.sh docker
+```
+> 启动
+```
+bash cmd_batch.sh "systemctl start docker"
+```
+> 运行状态
+```
+bash cmd_batch.sh "systemctl status docker"
+```
+> 自启动状态
+```
+bash cmd_batch.sh "systemctl enable docker"
+```
