@@ -23,19 +23,20 @@ usage = 'usage: python aws_ec.py [start|stop]'
 assert len(sys.argv) == 2, usage
 
 
-def wait_for(obj):
+def wait_for(ins, res):
     for _ in range(10):
-        if obj:
-            return obj
+        if res:
+            return res 
         time.sleep(2)
+        ins.reload()
     return '获取失败, 请重试'
 
 
 op = sys.argv[1]
 if op == 'start':
     print instance.start()['StartingInstances']
-    print 'DNS:', wait_for(instance.public_dns_name)
-    print 'IP:', wait_for(instance.public_ip_address)
+    print 'DNS:', wait_for(instance, instance.public_dns_name)
+    print 'IP:', wait_for(instance, instance.public_ip_address)
 elif op == 'stop':
     print instance.stop()['StoppingInstances']
 else:
