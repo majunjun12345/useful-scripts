@@ -67,3 +67,16 @@ bash cmd_batch.sh "systemctl status docker"
 ```
 bash cmd_batch.sh "systemctl enable docker"
 ```
+
+# aws_ec.py
+远程启动或关闭aws 上的ec 服务器，需要提供服务器ID，访问秘钥对
+
+> 启动
+```
+python aws_ec.py start
+```
+
+> 关闭
+```
+python aws_ec.py stop
+```
