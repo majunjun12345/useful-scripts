@@ -28,5 +28,5 @@ cmds = [
     "sed -i -e 's/# export JAVA_HOME=/export JAVA_HOME=\/usr\/lib\/jvm\/jre/g' etc/hadoop/hadoop-env.sh",
     'bin/hadoop version'
 ]
-must_run(cmds)
+map(must_run, cmds)
 print 'Done.'
