@@ -2,7 +2,7 @@ import os
 
 STABLE_NAME = 'hadoop-3.2.0.tar.gz'
 STABLE_URL = 'http://mirror.bit.edu.cn/apache/hadoop/common/stable/%s' % STABLE_NAME
-YUMS = ['java', 'rsync', 'wget']
+YUMS = ['java-1.8.0-openjdk', 'java-1.8.0-openjdk-devel', 'rsync', 'wget']
 OP_HOME = '_hadoop_op_'
 INSTALL_HOME = '/opt'
 os.system('mkdir -p %s' % OP_HOME)
